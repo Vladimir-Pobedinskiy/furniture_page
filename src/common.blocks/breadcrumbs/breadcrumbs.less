@@ -1,0 +1,50 @@
+@import (reference) '../../less/variables.less';
+
+@white: #FFFFFF;
+@green: #359C31;
+@dark-100: #C4C4C4;
+@dark-200: #1A1A1A;
+
+@mobile: 576px;
+@tablet: 768px;
+@tablet-2: 992px;
+@desktop: 1200px;
+
+.breadcrumbs {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: @dark-100;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../breadcrumbs/breadcrumbs-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      right: -10px;
+      top: 7px;
+      width: 8px;
+      height: 6px;
+    }
+
+    
+    &:last-child {
+      margin-right: 0;
+      color: @dark-200;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+}
