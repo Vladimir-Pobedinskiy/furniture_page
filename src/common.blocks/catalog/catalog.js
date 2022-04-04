@@ -209,44 +209,49 @@ const rangeLength = function () {
 }
 rangeLength();
 
-// фильтр цены в адаптиве
-const iconFilter = document.querySelector('.tag__filter-button');
-const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.modal__close');
-const modalBack = document.querySelector('.modal__back');
-const modalContainer = document.querySelector('.modal__container');
 
-if (iconFilter) {
-	iconFilter.addEventListener("click", function (e) {
-		document.body.classList.add('lock');
-		modal.classList.add('--active');
-	});
-}
+// фильтры в адаптиве
+const modalFilters = function () {
 
-if (modalBack) {
-	modalBack.addEventListener("click", function (e) {
-		document.body.classList.remove('lock');
-		modal.classList.remove('--active');
-	});
-}
+	const iconFilter = document.querySelector('.tag__filter-button');
+	const modal = document.querySelector('.modal');
+	const modalClose = document.querySelector('.modal__close');
+	const modalBack = document.querySelector('.modal__back');
+	const modalContainer = document.querySelector('.modal__container');
 
-if (modalClose) {
-	modalClose.addEventListener("click", function (e) {
-		document.body.classList.remove('lock');
-		modal.classList.remove('--active');
-	});
-}
-
-if (modal) {
-modal.addEventListener('click', (event) => {
-	const target = event.target;
-	if (!target.closest('.modal__container')) {
-		document.body.classList.remove('lock');
-		modal.classList.remove('--active');
+	if (iconFilter) {
+		iconFilter.addEventListener("click", function (e) {
+			document.body.classList.add('lock');
+			modal.classList.add('--active');
+		});
 	}
-})
-}
 
+	if (modalBack) {
+		modalBack.addEventListener("click", function (e) {
+			document.body.classList.remove('lock');
+			modal.classList.remove('--active');
+		});
+	}
+
+	if (modalClose) {
+		modalClose.addEventListener("click", function (e) {
+			document.body.classList.remove('lock');
+			modal.classList.remove('--active');
+		});
+	}
+
+	if (modal) {
+		modal.addEventListener('click', (event) => {
+			const target = event.target;
+			if (!target.closest('.modal__container')) {
+				document.body.classList.remove('lock');
+				modal.classList.remove('--active');
+			}
+		})
+	}
+
+}
+modalFilters();
 
 // SPOLLERS
 const spollersFilter = function () {
@@ -264,12 +269,12 @@ const spollersFilter = function () {
 		if (spollersRegular.length > 0) {
 			initSpollers(spollersRegular);
 		}
-	
+
 		// Получение слойлеров с медиа запросами
 		const spollersMedia = Array.from(spollersArray).filter(function (item, index, self) {
 			return item.dataset.spollers.split(",")[0];
 		});
-	
+
 		// Инициализация слойлеров с медиа запросами
 		if (spollersMedia.length > 0) {
 			const breakpointsArray = [];
@@ -282,7 +287,7 @@ const spollersFilter = function () {
 				breakpoint.item = item;
 				breakpointsArray.push(breakpoint);
 			});
-	
+
 			// Получаем уникальные брейкпоинты
 			let mediaQueries = breakpointsArray.map(function (item) {
 				return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
@@ -290,14 +295,14 @@ const spollersFilter = function () {
 			mediaQueries = mediaQueries.filter(function (item, index, self) {
 				return self.indexOf(item) === index;
 			});
-	
+
 			// Работаем с каждым брейкпоинтом
 			mediaQueries.forEach(breakpoint => {
 				const paramsArray = breakpoint.split(",");
 				const mediaBreakpoint = paramsArray[1];
 				const mediaType = paramsArray[2];
 				const matchMedia = window.matchMedia(paramsArray[0]);
-	
+
 				// Объекты с нужными условиями
 				const spollersArray = breakpointsArray.filter(function (item) {
 					if (item.value === mediaBreakpoint && item.type === mediaType) {
@@ -343,6 +348,7 @@ const spollersFilter = function () {
 				});
 			}
 		}
+
 		function setSpollerAction(e) {
 			const el = e.target;
 			if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
@@ -359,6 +365,7 @@ const spollersFilter = function () {
 				e.preventDefault();
 			}
 		}
+
 		function hideSpollersBody(spollersBlock) {
 			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
 			if (spollerActiveTitle) {

@@ -22,15 +22,15 @@
         <img class="header__logo-img logo-img" src="common.blocks/header/logo.svg" alt="логотип сайта">
       </a>
 
-      <div class="header__input-box">
+      <form class="header__input-form" action="#">
 
-        <input class="header__search" type="search" placeholder="Поиск товара">
+        <input class="header__search" type="search" placeholder="Поиск товара" name="search">
 
         <button class="header__button-search" type="button">
           <img class="header__search-img" src="common.blocks/header/icon-search.svg" alt="иконка поиска">
         </button>
 
-      </div>
+      </form>
 
       <ul class="header__icon-list">
 
@@ -175,7 +175,7 @@
 
       <div class="container">
 
-        <h2 class="catalog__title title">Мягкая мебель</h2>
+        <h1 class="catalog__title title">Мягкая мебель</h1>
 
         <div class="catalog__inner">
 
@@ -187,14 +187,14 @@
                 <div class="sidebar__category category">
 
                   <button class="category__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
-                    <h3 class="category__title sidebar__title">Категория</h3>
+                    <span class="category__title sidebar__title">Категория</span>
                     <img class="sidebar__arrow sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg"
                       alt="стрелка">
                   </button>
 
                   <form class="category__form" action="#">
 
-                    <h4 class="category__subtitle">Мягкая мебель</h4>
+                    <h3 class="category__subtitle">Мягкая мебель</h3>
 
                     <ul class="category__list">
 
@@ -250,6 +250,7 @@
                     </ul>
 
                   </form>
+
                 </div>
               </li>
 
@@ -257,7 +258,7 @@
                 <div class="sidebar__price price">
 
                   <button class="price__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
-                    <h3 class="price__title sidebar__title">Цена</h3>
+                    <span class="price__title sidebar__title">Цена</span>
                     <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
                   </button>
 
@@ -268,7 +269,7 @@
                       <div class="price__input-wrapper">
 
                         <input class="price__input" type="text" data-type="double" data-min="0" data-max="343342"
-                          data-from="27000" data-to="320000">
+                          data-from="27000" data-to="320000" name="price">
                       </div>
 
                       <div class="price__inputs-box">
@@ -296,7 +297,7 @@
 
                   <form class="switch__form" action="#">
                     <label class="switch__label" for="switch">Товары со скидкой</label>
-                    <input class="switch__input" id="switch" type="checkbox">
+                    <input class="switch__input" id="switch" type="checkbox" name="switch">
                   </form>
 
                 </div>
@@ -306,7 +307,7 @@
                 <div class="sidebar__materials materials">
 
                   <button class="materials__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
-                    <h3 class="materials__title sidebar__title">Материалы</h3>
+                    <span class="materials__title sidebar__title">Материалы</span>
                     <img class="sidebar__arrow sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg"
                       alt="стрелка">
                   </button>
@@ -390,7 +391,7 @@
                 <div class="sidebar__height height">
 
                   <button class="height__button sidebar__button" type="button" tabindex="-1" data-spoller>
-                    <h3 class="height__title sidebar__title">Высота, см</h3>
+                    <span class="height__title sidebar__title">Высота, см</span>
                     <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
                   </button>
 
@@ -401,7 +402,7 @@
                       <div class="height__input-wrapper">
 
                         <input class="height__input" type="text" data-type="double" data-min="0" data-max="240"
-                          data-from="0" data-to="240">
+                          data-from="0" data-to="240" name="height">
                       </div>
 
                       <div class="height__inputs-box">
@@ -428,7 +429,7 @@
                 <div class="sidebar__length length">
 
                   <button class="length__button sidebar__button" type="button" tabindex="-1" data-spoller>
-                    <h3 class="length__title sidebar__title">Высота, см</h3>
+                    <span class="length__title sidebar__title">Длина, см</span>
                     <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
                   </button>
 
@@ -439,7 +440,7 @@
                       <div class="length__input-wrapper">
 
                         <input class="length__input" type="text" data-type="double" data-min="0" data-max="2000"
-                          data-from="400" data-to="2000">
+                          data-from="400" data-to="2000" name="length">
                       </div>
 
                       <div class="length__inputs-box">
@@ -511,7 +512,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/1.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Вилли Рогожка, розовый</h4>
+                  <h3 class="product__title">Диван-кровать Вилли Рогожка, розовый</h3>
 
                   <div class="product__price-box">
 
@@ -525,7 +526,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+                  <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h3>
 
                   <div class="product__price-box">
 
@@ -539,7 +540,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+                  <h3 class="product__title">Диван-кровать Бит-2 Латте</h3>
 
                   <div class="product__price-box">
 
@@ -553,7 +554,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+                  <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h3>
 
                   <div class="product__price-box">
 
@@ -567,7 +568,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+                  <h3 class="product__title">Диван-кровать Уют-2 фиолетовый</h3>
 
                   <div class="product__price-box">
 
@@ -581,7 +582,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+                  <h3 class="product__title">Диван-кровать Бит-2 Латте</h3>
 
                   <div class="product__price-box">
 
@@ -595,7 +596,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+                  <h3 class="product__title">Диван-кровать Уют-2 фиолетовый</h3>
 
                   <div class="product__price-box">
 
@@ -609,7 +610,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+                  <h3 class="product__title">Диван-кровать Бит-2 Латте</h3>
 
                   <div class="product__price-box">
 
@@ -623,7 +624,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+                  <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h3>
 
                   <div class="product__price-box">
 
@@ -637,7 +638,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+                  <h3 class="product__title">Диван-кровать Бит-2 Латте</h3>
 
                   <div class="product__price-box">
 
@@ -651,7 +652,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+                  <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h3>
 
                   <div class="product__price-box">
 
@@ -665,7 +666,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+                  <h3 class="product__title">Диван-кровать Уют-2 фиолетовый</h3>
 
                   <div class="product__price-box">
 
@@ -679,7 +680,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+                  <h3 class="product__title">Диван-кровать Бит-2 Латте</h3>
 
                   <div class="product__price-box">
 
@@ -693,7 +694,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+                  <h3 class="product__title">Диван-кровать Уют-2 фиолетовый</h3>
 
                   <div class="product__price-box">
 
@@ -707,7 +708,7 @@
                 <li class="product__item">
 
                   <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
-                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+                  <h3 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h3>
 
                   <div class="product__price-box">
 
@@ -728,7 +729,7 @@
 
         <div class="catalog__about about">
 
-          <h5 class="about__title">Мягкая мебель</h5>
+          <h2 class="about__title">Мягкая мебель</h2>
 
           <ul class="about__text-list">
             <li class="about__text-item">
