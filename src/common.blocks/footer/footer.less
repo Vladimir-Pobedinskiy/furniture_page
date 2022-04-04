@@ -101,6 +101,15 @@
     }
   }
 
+  &__shop-item,
+  &__catalog-item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__catalog {
     margin-right: 118px;
     max-width: 266px;
@@ -143,6 +152,8 @@
   }
 
   &__shop {
+    max-width: 140px;
+    width: 100%;
     margin-right: 124px;
 
     @media (max-width:@desktop) {
