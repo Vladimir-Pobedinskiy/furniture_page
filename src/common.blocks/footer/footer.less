@@ -1,0 +1,248 @@
+@import (reference) '../../less/variables.less';
+
+.footer {
+  background-color: @dark-200;
+
+  &__inner {
+    padding: 46px 0 32px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:@tablet-2) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+
+    @media (max-width:@tablet) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0;
+    }
+
+    @media (max-width:@mobile) {
+      padding: 48px 0;
+    }
+  }
+
+  &__about {
+    margin-right: 68px;
+    max-width: 286px;
+    min-width: 286px;
+    width: 100%;
+
+    @media (max-width:@desktop) {
+      margin-right: 60px;
+    }
+
+    @media (max-width:@mobile) {
+      order: 3;
+    }
+  }
+
+  &__about-logo {
+    margin-bottom: 24px;
+    max-width: 160px;
+    width: 100%;
+
+    @media (max-width:@mobile) {
+      display: none;
+    }
+  }
+
+  &__about-made {
+    display: none;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #A0A0A0; 
+    @media (max-width:@mobile){
+      display: block;
+    }
+  }
+
+  &__about-made-link {
+    text-decoration: underline;
+  }
+
+  &__address-box {
+    margin-bottom: 16px;
+
+    @media (max-width:@mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__address {
+    font-size: 14px;
+    line-height: 1.4;
+    color: @white;
+  }
+
+  &__confidentiality {
+    margin-bottom: 32px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4;
+    text-decoration-line: underline;
+    color: #A0A0A0;
+
+    @media (max-width:@mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__name-shop {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #A0A0A0;
+
+    @media (max-width:@mobile){
+       margin-bottom: 8px; 
+    }
+  }
+
+  &__catalog {
+    margin-right: 118px;
+    max-width: 266px;
+    width: 100%;
+
+    @media (max-width:@desktop) {
+      margin-right: 30px;
+    }
+
+    @media (max-width:@mobile) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #FFFFFF;
+
+    @media (max-width:@mobile) {
+      display: none;
+    }
+  }
+
+  &__catalog-list {
+    column-count: 2;
+
+    @media (max-width:@desktop) {
+      column-count: 1;
+    }
+  }
+
+  &__catalog-link {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #C4C4C4;
+  }
+
+  &__shop {
+    margin-right: 124px;
+
+    @media (max-width:@desktop) {
+      margin-right: 60px;
+    }
+
+    @media (max-width:@mobile) {
+      order: 1;
+    }
+  }
+
+  &__shop-item {
+    @media (max-width:@mobile) {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__shop-link {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #C4C4C4;
+  }
+
+  &__contacts {
+    max-width: 204px;
+    min-width: 204px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width:@tablet) {
+      align-items: flex-start;
+    }
+
+    @media (max-width:@mobile) {
+      order: 2;
+    }
+
+  }
+
+  &__tel {
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: @green;
+
+    @media (max-width:@mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__opening-hours {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #C4C4C4;
+  }
+
+  &__email {
+    margin-bottom: 42px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: right;
+    text-decoration-line: underline;
+    color: @white;
+
+    @media (max-width:@mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__socials {
+    margin-bottom: 33px;
+    width: 32px;
+    height: 32px;
+
+    @media (max-width:@mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__made {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #A0A0A0;
+
+    @media (max-width:@mobile) {
+      order: 4;
+      display: none;
+    }
+  }
+
+  &__made-link {
+    text-decoration: underline;
+  }
+}

@@ -179,14 +179,14 @@
 
         <div class="catalog__inner">
 
-          <div class="catalog__sidebar sidebar">
+          <div class="catalog__sidebar sidebar" data-da=".modal__content,768">
 
-            <ul class="sidebar__list">
+            <ul class="sidebar__list" data-spollers="768,max">
 
               <li class="sidebar__item">
                 <div class="sidebar__category category">
 
-                  <button class="category__button sidebar__button" type="button">
+                  <button class="category__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
                     <h3 class="category__title sidebar__title">Категория</h3>
                     <img class="sidebar__arrow sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg"
                       alt="стрелка">
@@ -256,34 +256,34 @@
               <li class="sidebar__item">
                 <div class="sidebar__price price">
 
-                  <button class="price__button sidebar__button" type="button">
+                  <button class="price__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
                     <h3 class="price__title sidebar__title">Цена</h3>
-                    <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg"
-                      alt="стрелка">
+                    <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
                   </button>
 
                   <form class="price__form" action="#">
 
                     <div class="price__box">
 
-                      <div class="price__input-box">
+                      <div class="price__input-wrapper">
 
-                        <div class="price__input-inner">
-
-                          <input class="price__input-from" type="text">
-
-                        </div>
-
-                        <div class="price__input-inner">
-
-                          <input class="price__input-to" type="text">
-
-                        </div>
-
+                        <input class="price__input" type="text" data-type="double" data-min="0" data-max="343342"
+                          data-from="27000" data-to="320000">
                       </div>
 
-                      <input class="price__input" type="text" data-type="double" data-min="0" data-max="1200"
-                        data-from="100" data-to="1000">
+                      <div class="price__inputs-box">
+
+                        <label class="price__input-label">
+                          <span class="price__input-span">от</span>
+                          <input class="price__input-from" type="text">
+                        </label>
+
+                        <label class="price__input-label">
+                          <span class="price__input-span">до</span>
+                          <input class="price__input-to" type="text">
+                        </label>
+
+                      </div>
 
                     </div>
 
@@ -291,7 +291,176 @@
                 </div>
               </li>
 
+              <li class="sidebar__item">
+                <div class="sidebar__switch switch">
 
+                  <form class="switch__form" action="#">
+                    <label class="switch__label" for="switch">Товары со скидкой</label>
+                    <input class="switch__input" id="switch" type="checkbox">
+                  </form>
+
+                </div>
+              </li>
+
+              <li class="sidebar__item">
+                <div class="sidebar__materials materials">
+
+                  <button class="materials__button sidebar__button _active" type="button" tabindex="-1" data-spoller>
+                    <h3 class="materials__title sidebar__title">Материалы</h3>
+                    <img class="sidebar__arrow sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg"
+                      alt="стрелка">
+                  </button>
+
+                  <form class="materials__form" action="#">
+
+                    <ul class="materials__list">
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          ABS пластик
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Amicor TM
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Eco Foam
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          PLA пластик
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Акрил
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Алюминиевый сплав
+                        </label>
+                      </li>
+
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Алюминий
+                        </label>
+                      </li>
+                      <li class="materials__item">
+                        <label class="materials__label">
+                          <input class="materials__input" type="checkbox">
+                          <span class="materials__checkbox"></span>
+                          Бамбук
+                        </label>
+                      </li>
+
+                    </ul>
+
+                    <a class="materials__link" href="#">Показать все</a>
+
+                  </form>
+                </div>
+              </li>
+
+              <li class="sidebar__item">
+                <div class="sidebar__height height">
+
+                  <button class="height__button sidebar__button" type="button" tabindex="-1" data-spoller>
+                    <h3 class="height__title sidebar__title">Высота, см</h3>
+                    <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
+                  </button>
+
+                  <form class="height__form" action="#">
+
+                    <div class="height__box">
+
+                      <div class="height__input-wrapper">
+
+                        <input class="height__input" type="text" data-type="double" data-min="0" data-max="240"
+                          data-from="0" data-to="240">
+                      </div>
+
+                      <div class="height__inputs-box">
+
+                        <label class="height__input-label height__input-label-from">
+                          <span class="height__input-span">от</span>
+                          <input class="height__input-from" type="text">
+                        </label>
+
+                        <label class="height__input-label height__input-label-to">
+                          <span class="height__input-span">до</span>
+                          <input class="height__input-to" type="text">
+                        </label>
+
+                      </div>
+
+                    </div>
+
+                  </form>
+                </div>
+              </li>
+
+              <li class="sidebar__item">
+                <div class="sidebar__length length">
+
+                  <button class="length__button sidebar__button" type="button" tabindex="-1" data-spoller>
+                    <h3 class="length__title sidebar__title">Высота, см</h3>
+                    <img class="sidebar__arrow" src="common.blocks/catalog/sidebar-arrow.svg" alt="стрелка">
+                  </button>
+
+                  <form class="length__form" action="#">
+
+                    <div class="length__box">
+
+                      <div class="length__input-wrapper">
+
+                        <input class="length__input" type="text" data-type="double" data-min="0" data-max="2000"
+                          data-from="400" data-to="2000">
+                      </div>
+
+                      <div class="length__inputs-box">
+
+                        <label class="length__input-label length__input-label-from">
+                          <span class="length__input-span">от</span>
+                          <input class="length__input-from" type="text">
+                        </label>
+
+                        <label class="length__input-label length__input-label-to">
+                          <span class="length__input-span">до</span>
+                          <input class="length__input-to" type="text">
+                        </label>
+
+                      </div>
+
+                    </div>
+
+                  </form>
+                </div>
+              </li>
 
             </ul>
 
@@ -299,14 +468,410 @@
 
           <div class="catalog__content">
 
+            <div class="catalog__content-tag tag">
+
+              <ul class="tag__list">
+
+                <li class="tag__item">
+                  <p class="tag__title">Материалы: Eco Foam</p>
+                  <button class="tag__close">
+                    <img class="tag__close-img" src="common.blocks/catalog/icon-tag-close.svg" alt="иконка закрытия">
+                  </button>
+                </li>
+
+                <li class="tag__item">
+                  <p class="tag__title">Цвет: Бирюзовый</p>
+                  <button class="tag__close">
+                    <img class="tag__close-img" src="common.blocks/catalog/icon-tag-close.svg" alt="иконка закрытия">
+                  </button>
+                </li>
+
+                <li class="tag__item">
+                  <p class="tag__title">Длина, см: от 400 до 2000</p>
+                  <button class="tag__close">
+                    <img class="tag__close-img" src="common.blocks/catalog/icon-tag-close.svg" alt="иконка закрытия">
+                  </button>
+                </li>
+
+                <a class="tag__link" href="#">Очистить все</a>
+
+                <button class="tag__filter-button" type="button">
+                  <img class="tag__filter-img" src="common.blocks/catalog/icon-filter.svg" alt="фильтр иконка">
+                  <p class="tag__filter-title">Фильтр</p>
+                </button>
+
+              </ul>
+
+            </div>
+
+            <div class="catalog__content-product product">
+
+              <ul class="product__list">
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/1.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Вилли Рогожка, розовый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">4234 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">12 244 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">7000 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">12 244 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">4234 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">7000 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">4234 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">7000 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">12 244 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">7000 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">12 244 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">4234 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/3.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Бит-2 Латте</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">7000 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/4.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Уют-2 фиолетовый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">4234 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+                <li class="product__item">
+
+                  <img class="product__img" src="common.blocks/catalog/product/2.jpg" alt="фото товара">
+                  <h4 class="product__title">Диван-кровать Шарм-Дизайн ЕвроШарм серый</h4>
+
+                  <div class="product__price-box">
+
+                    <span class="product__price-new">12 244 ₽</span>
+                    <span class="product__price-old">21 000 ₽</span>
+
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="catalog__about about">
+
+          <h5 class="about__title">Мягкая мебель</h5>
+
+          <ul class="about__text-list">
+            <li class="about__text-item">
+              <p class="about__text">Наша компания организует оптовые поставки любой сложности. Мы изготовим и доставим
+                заказ согласно вашему требованию и предподчениям. </p>
+            </li>
+            <li class="about__text-item">
+              <p class="about__text">Мы несём полную ответственнсть за качество и сроки поставки. Опираясь на наш опыт,
+                мы можем организовать сделку любой сложности. Мы стремимся удовлетворить спрос самого взыскательного
+                покупателя, поэтому модельный ряд нашей продукции ежегодно пополняется новыми моделями.</p>
+            </li>
+            <li class="about__text-item">
+              <p class="about__text">Благодаря передовым технологиям и оригинальным дизайнерским решениям мы стали
+                признанным лидером<br> в производстве корпусной мебели для дома и офиса.</p>
+            </li>
+            <li class="about__text-item">
+              <p class="about__text">Наша компания регулярно участвует в мебельных выставках.</p>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="modal">
+
+        <div class="modal__container">
+
+          <div class="modal__top">
+            <button class="modal__back" aria-label="Закрыть модальное окно">
+              <img class="modal__back-img" src="common.blocks/catalog/icon-close-1.svg" alt="">
+            </button>
+            <p class="modal__title">Мягкая мебель</p>
+            <button class="modal__close" aria-label="Закрыть модальное окно"></button>
+          </div>
+
+          <div class="modal__content">
+
+            <span class="sr-only">окно фильтра при адаптиве</span>
+
           </div>
 
         </div>
 
       </div>
+
     </section>
 
   </main>
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer__inner">
+
+        <div class="footer__about">
+
+          <img class="footer__about-logo" src="common.blocks/footer/logo-footer.svg" alt="логотип футера">
+
+          <div class="footer__address-box">
+            <p class="footer__address">Россия, г. Рузаевка, </p>
+            <p class="footer__address">ул. Карла Маркса, 16-г,</p>
+          </div>
+
+          <a class="footer__confidentiality" href="#">Политика конфиденциальности</a>
+          <p class="footer__name-shop">Точно Мебель — магазин мебели, 2020</p>
+          <p class="footer__about-made">Сделано в <a class="footer__about-made-link" href="#">OnlineBees</a></p>
+
+        </div>
+
+        <div class="footer__catalog">
+
+          <p class="footer__catalog-title footer__title">Каталог</p>
+
+          <ul class="footer__catalog-list">
+
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Мягкая мебель</a>
+            </li>
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Кухонная мебель</a>
+            </li>
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Для гостиных</a>
+            </li>
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Для прихожей</a>
+            </li>
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Столы</a>
+            </li>
+            <li class="footer__catalog-item">
+              <a class="footer__catalog-link" href="#">Шкафы</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer__shop">
+
+          <p class="footer__shop-title footer__title">Магазин</p>
+
+          <ul class="footer__shop-list">
+
+            <li class="footer__shop-item">
+              <a class="footer__shop-link" href="#">Выставочные залы</a>
+            </li>
+            <li class="footer__shop-item">
+              <a class="footer__shop-link" href="#">О нас</a>
+            </li>
+            <li class="footer__shop-item">
+              <a class="footer__shop-link" href="#">Новости</a>
+            </li>
+            <li class="footer__shop-item">
+              <a class="footer__shop-link" href="#">Отзывы</a>
+            </li>
+            <li class="footer__shop-item">
+              <a class="footer__shop-link" href="#">Контакты</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer__contacts">
+
+          <a class="footer__tel" href="tel:+79876543210">+7 987 654-32-10</a>
+          <p class="footer__opening-hours">Ежедневно с 09:00 – 20:00</p>
+          <a class="footer__email" href="mailto:example@example.ru">example@example.ru</a>
+          <a class="footer__socials" href="#">
+            <img class="footer__socials-img" src="common.blocks/footer/instagram.svg" alt="инстаграмм">
+          </a>
+          <p class="footer__made">Сделано в <a class="footer__made-link" href="#">OnlineBees</a></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 

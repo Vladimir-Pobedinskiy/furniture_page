@@ -29,14 +29,14 @@ module.exports = {
     filename: 'js/[name].js',
   },
   externals: {
-    jquery: 'jQuery',
-    $: 'jQuery',
+    // jquery: 'jQuery',
+    // $: 'jQuery',
   },
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      'jquery-ui': 'jquery-ui/ui/widgets',
-      'jquery-ui-css': 'jquery-ui/../../themes/base',
+      // 'jquery-ui': 'jquery-ui/ui/widgets',
+      // 'jquery-ui-css': 'jquery-ui/../../themes/base',
       '@': path.resolve(__dirname, './src'),
     },
     symlinks: false,

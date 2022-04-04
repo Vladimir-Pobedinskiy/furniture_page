@@ -1,5 +1,9 @@
 /* eslint-disable */
-// require("expose-loader?$!expose-loader?jQuery!jquery");
+require("expose-loader?$!expose-loader?jQuery!jquery");
+
+
+require("ion-rangeslider/js/ion.rangeSlider.js");
+require("ion-rangeslider/css/ion.rangeSlider.css");
 
 // flexslider
 // require("./flexslider2/flexslider.css")
@@ -61,9 +65,7 @@
 // require("lightbox2");
 // require("lightbox2/dist/css/lightbox.css");
 
-// range slider 
-require("ion-rangeslider/css/ion.rangeSlider.css");
-import 'ion-rangeslider/js/ion.rangeSlider.js';
-
+import noUiSlider from 'nouislider';
+import 'nouislider/dist/nouislider.css';
 // normalize.css
 require('normalize.css/normalize.css');

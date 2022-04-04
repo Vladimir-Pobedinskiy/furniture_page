@@ -131,11 +131,15 @@ body {
 
 .title {
   font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 48px;
-line-height: 1.2;
-color: @dark-200;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.2;
+  color: @dark-200;
+
+  @media (max-width:@mobile){
+     font-size: 24px; 
+  }
 }
 
 .sr-only {
@@ -148,4 +152,3 @@ color: @dark-200;
   height: 1px;
   clip: rect(0 0 0 0);
 }
-

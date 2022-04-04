@@ -60,6 +60,7 @@
     "jsdoc-webpack-plugin": "^0.1.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "nouislider": "^15.5.1",
     "path": "^0.12.7",
     "postcss-inline-svg": "^3.1.1",
     "postcss-loader": "^2.1.5",
