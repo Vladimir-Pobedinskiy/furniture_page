@@ -51,7 +51,7 @@
 .sidebar {
 
   &__button {
-    margin-bottom: 16px;
+    padding-bottom: 16px;
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -145,7 +145,7 @@
   margin-bottom: 40px;
 
   &__input-wrapper {
-    margin-top: -22px;
+    transform: translateY(-22px);
   }
 
   &__inputs-box {
@@ -330,7 +330,7 @@
   margin-bottom: 32px;
 
   &__input-wrapper {
-    margin-top: -22px;
+    transform: translateY(-22px);
   }
 
   &__inputs-box {
@@ -380,7 +380,7 @@
 .length {
 
   &__input-wrapper {
-    margin-top: -22px;
+    transform: translateY(-22px);
   }
 
   &__inputs-box {
@@ -645,14 +645,12 @@
   justify-content: flex-end;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(200%);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   &.--active {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   &__top {
@@ -684,6 +682,12 @@
     overflow-y: auto;
     cursor: default;
     text-align: left;
+    transform: translateX(200%);
+    transition: transform 0.3s ease-in-out;
+
+    &.--active {
+      transform: translateX(0);
+    }
   }
 
   &__back {

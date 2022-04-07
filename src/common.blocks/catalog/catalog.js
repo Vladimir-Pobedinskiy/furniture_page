@@ -215,14 +215,15 @@ const modalFilters = function () {
 
 	const iconFilter = document.querySelector('.tag__filter-button');
 	const modal = document.querySelector('.modal');
+	const modalContainer = document.querySelector('.modal__container');
 	const modalClose = document.querySelector('.modal__close');
 	const modalBack = document.querySelector('.modal__back');
-	const modalContainer = document.querySelector('.modal__container');
 
 	if (iconFilter) {
 		iconFilter.addEventListener("click", function (e) {
 			document.body.classList.add('lock');
 			modal.classList.add('--active');
+			modalContainer.classList.add('--active');
 		});
 	}
 
@@ -230,6 +231,7 @@ const modalFilters = function () {
 		modalBack.addEventListener("click", function (e) {
 			document.body.classList.remove('lock');
 			modal.classList.remove('--active');
+			modalContainer.classList.remove('--active');
 		});
 	}
 
@@ -237,6 +239,7 @@ const modalFilters = function () {
 		modalClose.addEventListener("click", function (e) {
 			document.body.classList.remove('lock');
 			modal.classList.remove('--active');
+			modalContainer.classList.remove('--active');
 		});
 	}
 
@@ -246,12 +249,17 @@ const modalFilters = function () {
 			if (!target.closest('.modal__container')) {
 				document.body.classList.remove('lock');
 				modal.classList.remove('--active');
+				modalContainer.classList.remove('--active');
 			}
 		})
 	}
 
+
+
 }
 modalFilters();
+
+
 
 // SPOLLERS
 const spollersFilter = function () {
@@ -443,3 +451,7 @@ const spollersFilter = function () {
 
 }
 spollersFilter();
+
+
+
+
